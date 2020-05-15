@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<HEAD>
+<SCRIPT>
+function loadDoc() {
+  var x = new XMLHttpRequest();
+  x.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  x.open("GET", "http://127.0.0.1:8887/fo.txt", true);
+  x.send();
+}
+</SCRIPT>
+</HEAD>
+<body>
+
+<div id="demo">
+  <h2>change</h2>
+  <button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+</body>
+</html>
