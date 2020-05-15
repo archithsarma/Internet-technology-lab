@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> Bliss </title>
+        <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css"/>
+    </head>
+    <body>
+
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lemonada', cursive;
+}
+
+body {
+    position: relative;
+    background: #eee;
+}
+
+header {
+    position: relative;
+    background: #ddd;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+.heading {
+    font-size: 2.5rem;
+}
+
+.icons {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+}
+
+a {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#carol {
+    height: 70vh;
+    background: red;
+    position: relative;
+}
+
+#carol figure {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+#carol span {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translate(-25%, -50%);
+    color: pink;
+}
+
+#carol span button {
+    display: block;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background: #eee;
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.25);
+    transition: all .4s ease;
+}
+#carol span button:active {
+    transform: scale(0.8);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.7);
+}
+
+#face,#hair {
+    height: 80vh;
+    background: #eee;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+#hair {
+    background: magenta;
+}
+
+.item-box {
+    height: 350px;
+    width: 300px;
+    background: black;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.item-box figure img{
+    height: 275px;
+    width: 300px;
+   
+}
+
+.btn {
+    border: none;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+ 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+ 
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+</style>
+
+
+        <header>
+            <span class="heading">Farm FRESH</span>
+            <span class="icons">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg> &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 18 18"><path d="M9 1C4.58 1 1 4.58 1 9s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 2.75c1.24 0 2.25 1.01 2.25 2.25S10.24 8.25 9 8.25 6.75 7.24 6.75 6 7.76 3.75 9 3.75zM9 14.5c-1.86 0-3.49-.92-4.49-2.33C4.62 10.72 7.53 10 9 10c1.47 0 4.38.72 4.49 2.17-1 1.41-2.63 2.33-4.49 2.33z"/></svg> &nbsp;
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path d="M17.21 9l-4.38-6.56c-.19-.28-.51-.42-.83-.42-.32 0-.64.14-.83.43L6.79 9H2c-.55 0-1 .45-1 1 0 .09.01.18.04.27l2.54 9.27c.23.84 1 1.46 1.92 1.46h13c.92 0 1.69-.62 1.93-1.46l2.54-9.27L23 10c0-.55-.45-1-1-1h-4.79zM9 9l3-4.4L15 9H9zm3 8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+            </span>
+            <nav>
+                <a href="#face">exotic fruits</a> /
+                <a href="#hair">countrygrown</a> /
+                <div class="dropdown">
+                        <a>Shop All /</a>
+                        <div class="dropdown-content">
+                            <a href="#face">exotic fruits</a><br>
+                            <a href="#hair">countrygrown</a><br>
+                            <a href="#story">something</a>
+                        </div>
+                      </div>
+                <a href="#story">Our Mission</a>
+            </nav>
+        </header>
+        <main>
+            <section id="carol">
+               
+                <span>
+                    Buy fresh fruits online!
+                    <button>Shop Now</button>
+                </span>
+            </section>
+            <section id="face">
+                <div class="item-box">
+                    <figure>
+                        <img src="ram.png"/>
+                    </figure>
+                    <button class="btn">Purchase Now</button>
+                </div>
+                <div class="item-box">
+                    <figure>
+                        <img src="cherry.png"/>
+                    </figure>
+                    <button class="btn">Purchase Now</button>
+                </div>
+                <div class="item-box">
+                    <figure>
+                        <img src="grapes.png"/>
+                    </figure>
+                    <button class="btn">Purchase Now</button>
+                </div>
+                <div class="item-box">
+                    <figure>
+                        <img src="custardapple.png"/>
+                    </figure>
+                    <button class="btn">Purchase Now</button>
+                </div>
+            </section>
+
+            <section id="hair">
+                    <div class="item-box">
+                        <figure>
+                            <img src="apple.png"/>
+                        </figure>
+                        <button class="btn">Purchase Now</button>
+                    </div>
+                    <div class="item-box">
+                        <figure>
+                            <img src="orange.png"/>
+                        </figure>
+                        <button class="btn">Purchase Now</button>
+                    </div>
+                    <div class="item-box">
+                        <figure>
+                            <img src="pineapple.png"/>
+                        </figure>
+                        <button class="btn">Purchase Now</button>
+                    </div>
+                    <div class="item-box">
+                        <figure>
+                            <img src="strawberry.png"/>
+                        </figure>
+                        <button class="btn">Purchase Now</button>
+                    </div>
+                </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
